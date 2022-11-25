@@ -1,0 +1,25 @@
+{
+  "name": "my-discord",
+  "version": "1.0.0",
+  "description": "Discord-clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "import": "postcss Assets/styles/mian.css --use postcss-import -o Assets/css/main.import.css",
+    "prefixer": "postcss Assets/css/main.import.css --use autoprefixer -o Assets/css/prefixer.import.css",
+    "minimize": "postcss Assets/css/prefixer.import.css --use cssnano -o Assets/css/final.css",
+    "dev":"npm-run-all import prefixer minimize"
+  },
+  "author": "Abdallah mahmoud",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
